@@ -1,5 +1,5 @@
 .book {
-  @apply w-[276px] h-[375px] my-[20px] mx-auto transition-transform duration-500 hover:scale-y-105 hover:scale-x-95;
+  @apply relative aspect-[0.736] w-[200px] h-auto my-[20px] mx-auto drop-shadow-2xl transition-transform duration-500 hover:cursor-grab hover:scale-y-105 hover:scale-x-95 md:w-[276px] md:drop-shadow-['unset'];
   
   -moz-transform: scaleX(0.88) scaleY(0.95);
   -moz-perspective: 150px;
@@ -26,7 +26,7 @@
   transform: scaleX(0.88) scaleY(0.95);
 
   img {
-    @apply block absolute h-[375px] w-[276px] z-[5];
+    @apply block absolute aspect-[0.736] w-full h-auto z-[5];
     -moz-transform: rotateY(-4deg) translateZ(0px);
     -webkit-transform: rotateY(-4deg) translateZ(0px);
     -o-transform: rotateY(-4deg) translateZ(0px);
@@ -40,7 +40,7 @@
   }
 
   &:before {
-    @apply h-full w-[40px] absolute right-[-25px] top-0 bg-[#89221B] z-[2];
+    @apply h-full w-10 absolute right-[-25px] top-0 bg-[#89221B] z-[2];
     -moz-transform: rotateY(-4deg) translateZ(0px);    
     -webkit-transform: rotateY(-4deg) translateZ(0px);
     -o-transform: rotateY(-4deg) translateZ(0px);    
@@ -63,7 +63,7 @@
   }
 
   span {
-    @apply block absolute bottom-[-13px] h-[100px] right-[-110px] w-[200px] rounded-[15px] bg-[linear-gradient(transparent,rgba(0,0,0,0.1)_15%)] shadow-[5px_12px_15px_5px_rgba(0,0,0,0.1)];
+    @apply hidden md:block absolute bottom-[-13px] h-[100px] right-[-110px] w-[200px] rounded-[15px] bg-[linear-gradient(transparent,rgba(0,0,0,0.1)_15%)] shadow-[5px_12px_15px_5px_rgba(0,0,0,0.1)];
     -moz-transform: rotate(5deg) skew(-65deg);
     -webkit-transform: rotate(5deg) skew(-35deg);
     -o-transform: rotate(5deg) skew(-35deg);

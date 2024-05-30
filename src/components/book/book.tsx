@@ -14,6 +14,9 @@ const Book = ( {cover, title}: BookProps ) => {
           <p className="text-gray-700 mt-2">{item.book.synopsis}</p>
         </div> */
     <div className="book">
+      <h3 className='absolute -left-6 top-1/2 -rotate-90 origin-center -translate-x-1/2 -translate-y-1/2 w-full font-bold md:text-xl xl:text-2xl'>
+        {title}
+      </h3>
       <span></span>
       <img src={cover} alt={title} title={title} />
     </div>
