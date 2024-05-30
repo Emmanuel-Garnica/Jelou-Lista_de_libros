@@ -1,10 +1,16 @@
 import './App.css'
+import BooksList from './components/bookList/BookList'
+import Banner from './components/banner/banner';
 
 function App() {
    return (
-    <h1 className='text-3xl font-bold underline'>
-      Starting project!
-    </h1>  
+    <main className='container mx-auto p-4'>
+      <Banner>
+        This is the banner
+        <h1 className="text-3xl font-bold mb-4">Book List</h1>
+      </Banner>
+      <BooksList />
+    </main>
   )
 }
 

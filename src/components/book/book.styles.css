@@ -1,0 +1,69 @@
+.book {
+  @apply w-[276px] h-[375px] my-[20px] mx-auto;
+  
+  -moz-transform: scaleX(0.88) scaleY(0.95);
+  -moz-perspective: 150px;
+  -moz-perspective-origin: right center;
+  
+  -webkit-perspective: 150px;
+  -webkit-perspective-origin: right center;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: scaleX(0.88) scaleY(0.95);
+  
+  -o-perspective: 150px;
+  -o-perspective-origin: right center;
+  -o-transform-style: preserve-3d;
+  -o-transform: scaleX(0.88) scaleY(0.95);
+  
+  -ms-perspective: 150px;
+  -ms-perspective-origin: right center;
+  -ms-transform-style: preserve-3d; 
+  -ms-transform: scaleX(0.88) scaleY(0.95);   
+  
+  perspective: 150px;
+  perspective-origin: right center;
+  transform-style: preserve-3d;
+  transform: scaleX(0.88) scaleY(0.95);
+
+  img {
+    @apply block absolute h-[375px] w-[276px] z-[5];
+    -moz-transform: rotateY(-4deg) translateZ(0px);
+    -webkit-transform: rotateY(-4deg) translateZ(0px);
+    -o-transform: rotateY(-4deg) translateZ(0px);
+    -ms-transform: rotateY(-4deg) translateZ(0px);
+    transform: rotateY(-4deg) translateZ(0px);
+  }
+
+  &:before,
+  &:after {
+    @apply content-[''] absolute;
+  }
+
+  &:before {
+    @apply h-full w-[40px] absolute right-[-25px] top-0 bg-[#89221B] z-[2];
+    -moz-transform: rotateY(-4deg) translateZ(0px);    
+    -webkit-transform: rotateY(-4deg) translateZ(0px);
+    -o-transform: rotateY(-4deg) translateZ(0px);    
+    -ms-transform: rotateY(-4deg) translateZ(0px);
+    transform: rotateY(-4deg) translateZ(0px);
+  }
+
+  &:after {
+    @apply bg-[#F5F5F5] shadow-[0_1px_4px_rgba(0,0,0,0.1),18px_3px_20px_rgba(0,0,0,0.25)_inset] h-[98%] w-[30px] right-[-19px] top-[1%] z-[3];
+    -moz-perspective: 5px;
+    -moz-transform: rotateY(20deg) translateZ(5px);
+    -webkit-perspective: 5px;
+    -webkit-transform: rotateY(20deg) translateZ(5px);
+    -o-perspective: 5px;
+    -o-transform: rotateY(20deg) translateZ(5px);
+    -ms-perspective: 5px;
+    -ms-transform: rotateY(20deg) translateZ(5px);    
+    perspective: 5px;
+    transform: rotateY(20deg) translateZ(5px);
+  }
+
+  span {
+    @apply block absolute bottom-[-13px] h-[100px] right-[-110px] w-[200px] rounded-[15px] shadow-[5px_12px_15px_5px_rgba(0,0,0,0.1)] rotate-[5deg] skew-x-[-35deg] skew-y-[-35deg] bg-[linear-gradient(transparent,rgba(0,0,0,0.1)_15%)];
+  }
+
+}
