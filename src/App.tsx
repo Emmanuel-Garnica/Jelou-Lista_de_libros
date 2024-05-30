@@ -1,6 +1,7 @@
 import './App.css'
-import BooksList from './components/bookList/BookList'
-import Banner from './components/banner/banner';
+import { BooksList } from './components/booksList';
+import { Banner } from './components/banner';
+import { Button } from './components/ui/button';
 
 function App() {
    return (
@@ -10,6 +11,7 @@ function App() {
         <h1 className="text-3xl font-bold mb-4">Book List</h1>
       </Banner>
       <BooksList />
+      <Button>Click me</Button>
     </main>
   )
 }

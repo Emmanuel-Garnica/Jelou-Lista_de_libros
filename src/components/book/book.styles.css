@@ -1,5 +1,5 @@
 .book {
-  @apply w-[276px] h-[375px] my-[20px] mx-auto;
+  @apply w-[276px] h-[375px] my-[20px] mx-auto transition-transform duration-500 hover:scale-y-105 hover:scale-x-95;
   
   -moz-transform: scaleX(0.88) scaleY(0.95);
   -moz-perspective: 150px;
@@ -63,7 +63,13 @@
   }
 
   span {
-    @apply block absolute bottom-[-13px] h-[100px] right-[-110px] w-[200px] rounded-[15px] shadow-[5px_12px_15px_5px_rgba(0,0,0,0.1)] rotate-[5deg] skew-x-[-35deg] skew-y-[-35deg] bg-[linear-gradient(transparent,rgba(0,0,0,0.1)_15%)];
+    @apply block absolute bottom-[-13px] h-[100px] right-[-110px] w-[200px] rounded-[15px] bg-[linear-gradient(transparent,rgba(0,0,0,0.1)_15%)] shadow-[5px_12px_15px_5px_rgba(0,0,0,0.1)];
+    -moz-transform: rotate(5deg) skew(-65deg);
+    -webkit-transform: rotate(5deg) skew(-35deg);
+    -o-transform: rotate(5deg) skew(-35deg);
+    -ms-transform: rotate(5deg) skew(-35deg);
+    transform: rotate(5deg) skew(-35deg);
   }
 
 }
+

@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 type Props = {
-  children: string | JSX.Element | JSX.Element[]
+  children: ReactNode
 }
 
 const Banner = ({children}: Props) => {
