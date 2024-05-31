@@ -1,11 +1,16 @@
 import './App.css'
 import { BooksList } from './components/booksList';
 import { Banner } from './components/banner';
-import { Button } from './components/ui/button';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
+import { Header } from './components/header';
+import { Footer } from './components/footer';
+import { BookCatalog } from './components/bookCatalog';
+
+import { useAppController } from './controllers/app.controller';
+import { ReadingList } from './components/readingList';
 
 function App() {
+  const { toast } = useAppController();
+
    return (
     <>
       <Header/>
@@ -20,10 +25,19 @@ function App() {
           </div>
         </Banner>
         
-        <Button>Click me</Button>
-
+        <section>
+          <BookCatalog />
+        </section>
       </main>
+
+      <ReadingList></ReadingList>
+
       <Footer/>
+      {toast.open && (
+        <div className='text-white bg-red-500 fixed top-4 right-4 px-4 py-2 rounded-lg'>
+          {toast.msg}
+        </div>
+      )}
     </>
   )
 }
