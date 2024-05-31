@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="/Jelou-Lista_de_libros" className="flex items-center">
+            <picture className="flex items-center">
               <img
                 src={LibraryLogo}
                 className="h-16 me-3"
@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="self-center text-2xl font-semibold whitespace-nowrap bg-gradient-to-r from-red via-primary to-secondary bg-clip-text text-transparent">
                 Librería Jelou
               </span>
-            </a>
+            </picture>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6">
             <div>
@@ -27,6 +27,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://react.dev/"
+                    target="_blank"
                     className="hover:text-primary hover:underline"
                   >
                     ReactJS
@@ -35,6 +36,7 @@ const Footer = () => {
                 <li className="my-4">
                   <a
                     href="https://tailwindcss.com/"
+                    target="_blank"
                     className="hover:text-primary hover:underline"
                   >
                     Tailwind CSS
@@ -43,6 +45,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="https://ui.shadcn.com/"
+                    target="_blank"
                     className="hover:text-primary hover:underline"
                   >
                     Shadcn ui
@@ -58,6 +61,7 @@ const Footer = () => {
                 <li className="mb-4">
                   <a
                     href="https://github.com/Emmanuel-Garnica"
+                    target="_blank"
                     className="hover:text-primary hover:underline "
                   >
                     Github
@@ -73,12 +77,13 @@ const Footer = () => {
             © 2024 Emmanuel Garnica.
           </span>
           <div className="flex mt-4 justify-center sm:mt-0">
-            <a href="https://www.linkedin.com/in/emmanuel-garnica/" className="text-gray-500 hover:text-secondary">
+            <a href="https://www.linkedin.com/in/emmanuel-garnica/" target="_blank" className="text-gray-500 hover:text-secondary">
               <Icons.linkedIn />
               <span className="sr-only">LinkedIn account</span>
             </a>
             <a
               href="https://github.com/Emmanuel-Garnica"
+              target="_blank"
               className="text-gray-500 hover:text-secondary ms-5"
             >
               <Icons.gitHub />
