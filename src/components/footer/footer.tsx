@@ -14,14 +14,14 @@ const Footer = () => {
                 alt="FlowBite Logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap bg-gradient-to-r from-red via-primary to-secondary bg-clip-text text-transparent">
-                Jelou Library
+                Librería Jelou
               </span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase">
-                Resources
+                Recursos
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li>
@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase">
-                Follow us
+                Síguenos
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">

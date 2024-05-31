@@ -18,19 +18,19 @@ function App() {
         <Banner classNames='flex gap-4 flex-col-reverse items-center py-4 lg:gap-8 lg:flex-row'>
           <BooksList />
           <div className='mx-auto'>
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-red via-primary to-secondary bg-clip-text text-transparent">Passionate Reader</h2>
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-red via-primary to-secondary bg-clip-text text-transparent">Lector Apasionado</h2>
             <h3 className='text-gray-500 font-medium'>
-              Make your own reading list here
-              </h3>
+              Crea tu propia lista de lectura con nosotros
+            </h3>
           </div>
         </Banner>
-        
+        <ReadingList></ReadingList>
         <section>
           <BookCatalog />
         </section>
       </main>
 
-      <ReadingList></ReadingList>
+      
 
       <Footer/>
       {toast.open && (

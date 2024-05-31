@@ -1,7 +1,7 @@
 import { useBooksStore } from "@/store/books/books.store";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { useEffect, useState } from "react";
-import { LibraryItem } from "@/store/books/book.entity";
+import { LibraryItem, Book } from "@/store/books/book.entity";
 
 const BookCatalog = () => {
 
@@ -16,7 +16,11 @@ const BookCatalog = () => {
   
   const handleFilter = (value: string) => {
     const foundBooks = books.filter((book) => book.book.genre === value )
-    setFilteredBooks(foundBooks)
+    setFilteredBooks(foundBooks)  
+  }
+
+  const handleClick = (book: Book) => {
+    addBookToList({ book })
     
   }
   
@@ -24,18 +28,18 @@ const BookCatalog = () => {
     <>
       <Select onValueChange={handleFilter}>
         <SelectTrigger className="w-[180px] mx-auto my-8">
-          <SelectValue placeholder="Filter by genre" />
+          <SelectValue placeholder="Filtra por género" />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="Terror">Terror</SelectItem>
-          <SelectItem value="Ciencia ficción">Science Fiction</SelectItem>
-          <SelectItem value="Fantasía">Fantasy</SelectItem>
+          <SelectItem value="Ciencia ficción">Ciencia ficción</SelectItem>
+          <SelectItem value="Fantasía">Fantasía</SelectItem>
           <SelectItem value="Zombies">Zombies</SelectItem>
         </SelectContent>
       </Select>
       <section className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredBooks.map(({book}) => (
-          <div onClick={() => addBookToList({ book })} key={book.ISBN} className="relative border p-4 rounded-lg shadow-lg cursor-pointer hover:border-primary">
+          <div onClick={() => handleClick( book )} key={book.ISBN} className="relative border p-4 rounded-lg shadow-lg cursor-pointer hover:border-primary">
               <img src={book.cover} alt={book.title} className="h-48 aspect-[0.7] w-auto object-cover mx-auto" />
               <h2 className="text-xl font-bold mt-2">{book.title}</h2>
               <p className="text-gray-600">{book.year}</p>
