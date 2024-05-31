@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Librería Jelou (React + TailwindCSS + TypeScript + Zustand + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto de prueba técnica para Jelou, a continuación algunos datos importantes a tener en cuenta:
 
-Currently, two official plugins are available:
+- Realizado con React + Typescript, TailwindCSS y Zustand.
+- Uso de algunos componentes con Shadcn UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Para ver el sitio live:
 
-## Expanding the ESLint configuration
+- Ve a https://emmanuel-garnica.github.io/Jelou-Lista_de_libros/.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instrucciones de instalación local:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clonar el repositorio.
+2. Instala las dependencias en la raiz del proyecto:
+  ```sh
+   npm install
+   ```
+3. Inicia el proyecto localmente con el siguiente comando:
+    ```sh
+   npm run dev
+   ```
+4. Abre tu localhost con `ctrl+click o command+click` y listo 🚀!
