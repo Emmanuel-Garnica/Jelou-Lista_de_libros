@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 
 type Props = {
-  children: ReactNode
+  children: ReactNode;
+  classNames?: string;
 }
 
-const Banner = ({children}: Props) => {
+const Banner = ({children, classNames}: Props) => {
   return (
-    <section>{children}</section>
+    <section className={classNames}>{children}</section>
   )
 }
 

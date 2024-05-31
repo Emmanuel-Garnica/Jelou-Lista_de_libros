@@ -43,7 +43,7 @@ const BooksList = () => {
   
 
   return (
-    <section className="w-full">
+    <section className="w-full lg:w-1/2">
       <Carousel
         opts={{
           align: "start",
@@ -53,7 +53,7 @@ const BooksList = () => {
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
-        <CarouselContent className=''>
+        <CarouselContent className='pb-8'>
           {books.map((item, index) => (
             /* <div key={index} className="border p-4 rounded-lg shadow-lg">
               <img src={item.book.cover} alt={item.book.title} className="h-48 w-full object-cover rounded-md" />
@@ -61,13 +61,13 @@ const BooksList = () => {
               <p className="text-gray-600">{item.book.year}</p>
               <p className="text-gray-700 mt-2">{item.book.synopsis}</p>
             </div> */
-            <CarouselItem className='md:basis-1/2 lg:basis-1/3' key={index}>
+            <CarouselItem className='' key={index}>
               <Book cover={item.book.cover} title={item.book.title}/>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className='text-red border-red -left-6 hover:bg-red hover:opacity-80 hover:text-white lg:left-0'/>
+        <CarouselNext className='text-red border-red -right-6 hover:bg-red hover:opacity-80 hover:text-white lg:right-0 '/>
       </Carousel>
     </section>
   );
